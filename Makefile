@@ -64,7 +64,7 @@ test_environment:
 # PROJECT RULES                                                                 #
 #################################################################################
 
-## Create a GitHub repo and first commit based on GITHUB_REPO_URL, GITHUB_API_TOKEN, and GITHUB_USERNAME
+## Create a GitHub repo and first commit based on GITHUB_REPO_URL, GITHUB_API_TOKEN, and GITHUB_USERNAME (depends on jq)
 new_github_repo:
 	git init
 	git add .

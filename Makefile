@@ -42,7 +42,7 @@ create_environment:
 ifeq (True,$(IS_ANACONDA))
 		@echo ">>> Detected Anaconda, creating conda environment."
 ifeq (3,$(findstring 3,$(PYTHON_INTERPRETER)))
-	conda create --name $(PROJECT_NAME) python=3.5
+	conda create --name $(PROJECT_NAME) python=3
 else
 	conda create --name $(PROJECT_NAME) python=2.7
 endif

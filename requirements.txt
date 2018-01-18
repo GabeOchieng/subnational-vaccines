@@ -1,4 +1,5 @@
 awscli
+benford_py
 click
 coverage
 flake8

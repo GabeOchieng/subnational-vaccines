@@ -19,7 +19,7 @@ PALETTE = OrderedDict([
     ('green', "#198E7D"),
     ('orange', "#E84B00"),
     ('purple', "#54333c"),
-    ('red', '#85171D'),
+    ('red', '#B83539'),
     ('lime', '#8DB134'),
 ])
 sns.set_palette(list(PALETTE.values()))

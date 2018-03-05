@@ -64,6 +64,14 @@ test_environment:
 # PROJECT RULES                                                                 #
 #################################################################################
 
+mics_data:
+	DYLD_LIBRARY_PATH=$(shell python -c "import site;print(site.getsitepackages()[0])")/savReaderWriter/spssio/macos \
+	LC_ALL=en_US.UTF-8 \
+	$(PYTHON_INTERPRETER) src/data/process_mics.py \
+		data/external/MICS \
+		data/interim/MICS
+
+
 ## Create a GitHub repo and first commit based on GITHUB_REPO_URL, GITHUB_API_TOKEN, and GITHUB_USERNAME (depends on jq)
 new_github_repo:
 	git init

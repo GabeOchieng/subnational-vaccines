@@ -75,8 +75,8 @@ def styled_fig_ax(size='wide',
     # set globally here since this seems ignored by rc_context.....
     # apologies for side effects.
     plt.rcParams['axes.titlesize'] = 1.25 * font_size
-    plt.rcParams['figure.dpi'] = 250
-    plt.rcParams['savefig.dpi'] = 250
+    plt.rcParams['figure.dpi'] = 196
+    plt.rcParams['savefig.dpi'] = 196
     plt.rcParams['legend.frameon'] = False
     plt.rcParams['legend.fontsize'] = 0.8 * font_size
 

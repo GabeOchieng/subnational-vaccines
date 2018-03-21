@@ -72,6 +72,12 @@ mics_data:
 		data/interim/MICS
 
 
+dhs_data:
+	$(PYTHON_INTERPRETER) src/data/process_dhs.py \
+		data/external/DHS \
+		data/interim/DHS
+
+
 ## Create a GitHub repo and first commit based on GITHUB_REPO_URL, GITHUB_API_TOKEN, and GITHUB_USERNAME (depends on jq)
 new_github_repo:
 	git init

@@ -4,6 +4,7 @@ click
 coverage
 flake8
 folium
+geopandas
 ipython
 jupyter
 lxml
@@ -12,6 +13,7 @@ numpy
 pandas
 plotly
 python-dotenv>=0.5.1
+rasterstats
 seaborn
 Sphinx
 xlrd

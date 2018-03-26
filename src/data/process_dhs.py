@@ -43,9 +43,14 @@ if __name__ == '__main__':
 
     logger.info(f'Loading data from {dhs_raw_folder} and saving to {dhs_out_folder}...')
     for folder in tqdm(list(dhs_raw_folder.iterdir())):
-        # only process children's recodes for the most recent wave.
+        # process children's recodes and bith recodes for the most recent wave.
         # see https://dhsprogram.com/data/File-Types-and-Names.cfm
-        if 'KR7' in folder.name and folder.name.endswith('DT'):
+        if (
+            (('KR7' in folder.name) or
+             ('BR7' in folder.name))
+            and folder.name.endswith('DT')
+            ):
+            # print(folder.name)
             survey_id = folder.stem[:-2]
             df, questions = load_stata_file(folder/f"{survey_id}FL.DTA", ['caseid'])
 

@@ -364,6 +364,10 @@ def labeled_bar(ax, to_plot, percentages=False, label_formatter=None, horizontal
             v = sum(v)
 
         v_str = label_formatter(v) if label_formatter else str(v)
-        ax.text(v + x_text_offset, i + y_text_offset, v_str, dict(size=font_size), va='center')
+
+        if v >= 0:
+            ax.text(v + x_text_offset, i + y_text_offset, v_str, dict(size=font_size), va='center')
+        else:
+            ax.text(v - 5*x_text_offset, i + y_text_offset, v_str, dict(size=font_size), va='center')
 
     return ax
